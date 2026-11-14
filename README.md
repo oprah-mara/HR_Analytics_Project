@@ -1,92 +1,59 @@
-# HR Analytics Dashboard | Power BI
+# HR Analytics Dashboard (Power BI)
 
-## Project Overview
+An end-to-end HR analytics project that examines workforce makeup, employee attrition, performance and attendance for 120 employees across six departments and three locations (Lagos, Abuja, Port Harcourt).
 
-This project focuses on analyzing employee data to gain insights into workforce composition, attendance patterns, employee performance, and employee attrition.
+![Dashboard overview](workforce%20overview%20dashboard.png)
+![Dashboard overview](attendance%20dahsboard.png)
+![Dashboard overview](performance%20dashboard.png)
 
-Using Microsoft Power BI, I developed an interactive HR Analytics dashboard to help HR professionals monitor workforce metrics, identify trends, and make data-driven decisions regarding employee management and organizational performance.
+## Business Questions
 
-The dashboard is organized into four analytical sections, each focusing on a different aspect of workforce management.
+- Where is attrition highest, and why do employees leave?
+- How do pay, performance and engagement relate to retention?
+- Does attendance help predict who leaves?
 
-## Business Objectives
+## Key Findings
 
-The primary objectives of this project were to:
+- **Attrition is 20.8%** (25 of 120 employees), concentrated in **Customer Service (54.5%)** and **HR (28.6%)**.
+- **Lower pay means higher attrition:** employees earning ₦400k or less left at 34.6%, compared with 12.9% above ₦600k.
+- **"Better Opportunity" is the top exit reason** (40% of exits), followed by Poor Management.
+- **Performance and engagement were flat** from 2024 to 2025 (average rating 3.24/5, engagement about 75/100).
+- **Attendance is uniform** (about 5.7% absence) across departments, locations and leavers, so it is not a useful early-warning signal here.
 
-- Analyze workforce composition and employee distribution.
-- Evaluate employee attendance and absenteeism patterns.
-- Examine employee performance across departments and review years.
-- Analyze employee attrition and identify potential workforce retention patterns.
-- Present HR metrics through interactive visualizations to support data-driven decision-making.
+## Recommendations
 
-## Dashboard Overview
+1. Review pay bands and career paths in Customer Service.
+2. Investigate HR Officer turnover (half of the role has left).
+3. Audit management quality using exit data.
+4. Track engagement and overtime as retention indicators.
+5. Add validation to HR data entry to fix inconsistent categories and missing reviews.
 
-The dashboard consists of four main pages:
+## Dataset
 
-### 1. Workforce Overview
-Provides a high-level summary of the organization's workforce, allowing users to explore employee distribution and workforce composition.
+`data/HR_PowerBI_Dataset.xlsx` contains three linked tables (joined on `EmployeeID`):
 
-### 2. Attendance Analysis
-Examines employee attendance patterns and absenteeism across the organization.
+| Sheet | Rows | Description |
+|---|---|---|
+| Employees | 120 | Demographics, department, job title, salary, hire and exit dates, exit reason |
+| Performance | 172 | 2024 and 2025 ratings, training hours, overtime hours, engagement score |
+| Attendance | 1,975 | Monthly working days, absences, leave and late arrivals (Jan 2025 to Sep 2026) |
 
-Key areas explored:
-- Attendance and absenteeism rates.
-- Total working days and absence days.
-- Late arrivals.
-- Monthly attendance trends.
-- Attendance patterns across departments.
+**Data cleaning:** standardised inconsistent text in Gender, Department and Location, and handled one missing salary.
 
-### 3. Performance Analysis
-Evaluates employee performance and explores factors associated with performance outcomes.
+## Tools
 
-Key areas explored:
-- Employee performance ratings.
-- Performance distribution.
-- Departmental performance comparisons.
-- Performance trends across review years.
-- Training hours and their relationship with employee performance.
-- Employee engagement metrics.
+Power BI · Excel · DAX · Power Query
 
-## Key Dashboard Findings
+## How to Use
 
-Some of the workforce metrics highlighted in the dashboard include:
+1. Download `dashboard/HR_Dashboard.pbix`.
+2. Open it in Power BI Desktop.
+3. If prompted, point the data source to `data/HR_PowerBI_Dataset.xlsx`.
 
-- **98 Active Employees:** Total number of active employees.
-- **95 Employees Evaluated:** Number of active employees who received a performance evaluation.
-- **3 Employees Not Evaluated:** Active employees without a recorded performance evaluation.
+## Full Report
 
-These metrics provide an overview of workforce status and performance evaluation coverage.
+See [`reports/HR_Analytics_Report.pdf`](reports/HR_Analytics_Report.pdf) for the complete analysis and limitations.
 
-## Tools & Technologies
+## Author
 
-| Tool | Application |
-|---|---|
-| Microsoft Power BI | Dashboard development and data visualization |
-| Power Query | Data cleaning and transformation |
-| DAX | Calculated measures and metrics |
-| Data Modeling | Establishing relationships and organizing data |
-| Excel | Source data management |
-
-## Technical Skills Demonstrated
-
-- Data cleaning and transformation.
-- Data modeling and relationship management.
-- DAX measures and calculated columns.
-- KPI development.
-- Data visualization and dashboard design.
-- Interactive filtering and slicers.
-- Trend and comparative analysis.
-- Translating business questions into analytical insights.
-
-## Project Outcome
-
-The completed dashboard provides an interactive overview of key HR functions, bringing workforce, attendance, performance, and attrition metrics together in one reporting environment.
-
-It demonstrates how business intelligence tools can transform raw employee data into meaningful visual insights that support workforce monitoring, performance evaluation, and HR decision-making.
-
----
-
-**Project Type:** Data Analytics / Business Intelligence
-
-**Tool:** Microsoft Power BI
-
-**Status:** Completed
+**Amarachi** · [GitHub](https://github.com/oprah-mara)
